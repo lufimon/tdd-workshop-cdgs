@@ -28,8 +28,20 @@ public class MyRange {
         return input.endsWith(")");
     }
 
-    public void validate() {
+    public void validateStart() {
         if (!startWithInclude() && !startWithExclude()) {
+            throw new InputInvalidException("Input error");
+        }
+    }
+
+    public void validateEnd() {
+        if (!endWithInclude() && !endWithExclude()) {
+            throw new InputInvalidException("Input error");
+        }
+    }
+
+    public void validate() {
+        if(!startWithInclude() && !startWithExclude() && !endWithInclude() && !endWithExclude()) {
             throw new InputInvalidException("Input error");
         }
     }
