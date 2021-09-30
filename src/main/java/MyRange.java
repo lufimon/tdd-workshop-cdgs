@@ -9,8 +9,8 @@ public class MyRange {
         return input.startsWith("[");
     }
 
-    public int getStart() {
-        return Integer.parseInt(String.valueOf(input.charAt(1)));
+    public boolean isStartWithOne() {
+        return Integer.parseInt(String.valueOf(input.charAt(1))) == 1;
     }
 
     public boolean startWithExclude() {

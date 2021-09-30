@@ -170,8 +170,8 @@ public class MyRangeTest {
         // Arrange
         String input = "[1,5]";
         MyRange range = new MyRange(input);
-        int result = range.getStart();
-        assertEquals(1, result);
+        boolean result = range.isStartWithOne();
+        assertTrue(result);
     }
 
     @Test
@@ -180,7 +180,7 @@ public class MyRangeTest {
         // Arrange
         String input = "[1,5)";
         MyRange range = new MyRange(input);
-        int result = range.getStart();
-        assertEquals(1, result);
+        boolean result = range.isStartWithOne();
+        assertTrue(result);
     }
 }
