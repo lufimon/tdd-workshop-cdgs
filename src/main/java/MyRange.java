@@ -27,4 +27,10 @@ public class MyRange {
     public boolean endWithExclude() {
         return input.endsWith(")");
     }
+
+    public void validate() {
+        if (!startWithInclude() && !startWithExclude()) {
+            throw new InputInvalidException("Input error");
+        }
+    }
 }
