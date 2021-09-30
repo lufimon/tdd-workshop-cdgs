@@ -173,4 +173,14 @@ public class MyRangeTest {
         int result = range.getStart();
         assertEquals(1, result);
     }
+
+    @Test
+    @DisplayName("ตัวเลขเริ่มต้นเป็น 1 โดยที่ input = [1,5), result = true")
+    public void case18() {
+        // Arrange
+        String input = "[1,5)";
+        MyRange range = new MyRange(input);
+        int result = range.getStart();
+        assertEquals(1, result);
+    }
 }
