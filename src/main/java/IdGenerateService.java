@@ -1,9 +1,14 @@
 import java.util.Random;
 
 public class IdGenerateService {
+    private final Random random;
+
+    public IdGenerateService(Random random) {
+        this.random = random;
+    }
+
     public String getData() {
         // Dependency
-        Random random = new Random();
         int id = random.nextInt(10);
         // Result
         return "CODE" + id;
