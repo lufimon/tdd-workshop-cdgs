@@ -10,7 +10,10 @@ public class MyRange {
     }
 
     public boolean isStartWithOne() {
-        return Integer.parseInt(String.valueOf(input.charAt(1))) == 1;
+        if(startWithInclude()){
+            return Integer.parseInt(String.valueOf(input.charAt(1))) == 1;
+        }
+        return false;
     }
 
     public boolean startWithExclude() {
