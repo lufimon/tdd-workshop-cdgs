@@ -193,4 +193,14 @@ public class MyRangeTest {
         boolean result = range.isStartWithOne();
         assertFalse(result);
     }
+
+    @Test
+    @DisplayName("ตัวเลขเริ่มต้นเป็น 1 โดยที่ input = (1,5), result = false")
+    public void case20() {
+        // Arrange
+        String input = "(1,5)";
+        MyRange range = new MyRange(input);
+        boolean result = range.isStartWithOne();
+        assertFalse(result);
+    }
 }
