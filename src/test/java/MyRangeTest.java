@@ -163,4 +163,14 @@ public class MyRangeTest {
         boolean result = range.endWithExclude();
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("ตัวเลขเริ่มต้นเป็น 1 โดยที่ input = [1,5], result = true")
+    public void case17() {
+        // Arrange
+        String input = "[1,5]";
+        MyRange range = new MyRange(input);
+        int result = range.getStart();
+        assertEquals(1, result);
+    }
 }
