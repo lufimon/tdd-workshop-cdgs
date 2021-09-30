@@ -12,4 +12,8 @@ public class MyRange {
     public int getStart() {
         return Integer.parseInt(String.valueOf(input.charAt(1)));
     }
+
+    public boolean startWithExclude() {
+        return input.startsWith("(");
+    }
 }
