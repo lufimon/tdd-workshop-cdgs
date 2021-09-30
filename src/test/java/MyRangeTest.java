@@ -83,4 +83,14 @@ public class MyRangeTest {
         boolean result = range.startWithExclude();
         assertTrue(result);
     }
+
+    @Test
+    @DisplayName("ตัวท้ายต้องเป็น ] (include) โดยที่ input = [1,5], result = true")
+    public void case09() {
+        // Arrange
+        String input = "[1,5]";
+        MyRange range = new MyRange(input);
+        boolean result = range.endWithInclude();
+        assertTrue(result);
+    }
 }
